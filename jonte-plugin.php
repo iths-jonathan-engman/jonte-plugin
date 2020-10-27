@@ -33,10 +33,6 @@ class Plugin
        
     }
 
-    function uninstall() {
-        // delete CPT
-    }
-
     function custom_post_type() {
         register_post_type( 'book', ['public' => true, 'label' => 'books'] );
     }
@@ -51,5 +47,3 @@ register_activation_hook( __FILE__, array( $jonteplugin, 'activate') );
 
 // deactivation
 register_deactivation_hook( __FILE__, array( $jonteplugin, 'deactivate') );
-
-// uninstall
